@@ -8,8 +8,8 @@ object BinaryOperation {
     "||" -> OR_OP,
     "&&" -> AND_OP,
     "==" -> EQ_OP,
-    ">=" -> GE_OP,
     ">"  -> GT_OP,
+    ">=" -> GE_OP,
     "+"  -> SUM_OP
   )
 

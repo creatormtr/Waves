@@ -67,7 +67,8 @@ class SetScriptTransactionSuite extends BaseTransactionSuite with CancelAfterFai
          AC && BC
 
       """.stripMargin).get.value
-      CompilerV1(dummyTypeCheckerContext, untyped).explicitGet()
+      assert(untyped.size == 1)
+      CompilerV1(dummyTypeCheckerContext, untyped.head).explicitGet()
     }
 
     val script = ScriptV1(scriptText).explicitGet()
@@ -185,7 +186,8 @@ class SetScriptTransactionSuite extends BaseTransactionSuite with CancelAfterFai
 
         AC && heightVerification
         """.stripMargin).get.value
-      CompilerV1(dummyTypeCheckerContext, untyped).explicitGet()
+      assert(untyped.size == 1)
+      CompilerV1(dummyTypeCheckerContext, untyped.head).explicitGet()
     }
 
     val script = ScriptV1(scriptText).explicitGet()
